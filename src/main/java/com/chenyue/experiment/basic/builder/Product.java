@@ -1,4 +1,4 @@
-package com.chenyue.experiment.builder;
+package com.chenyue.experiment.basic.builder;
 
 /**
  * @author chenyue7@foxmail.com

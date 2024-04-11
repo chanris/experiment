@@ -8,7 +8,7 @@ import java.util.HashSet;
  * @date 4/4/2024
  * @description 自顶向下 使用递归法 把数组分为更小
  */
-public class MergeSort {
+public class MergeSortAlgo {
     // 归并排序
     public void mergeSort(int[] arr) {
         if (arr == null || arr.length <= 1) {

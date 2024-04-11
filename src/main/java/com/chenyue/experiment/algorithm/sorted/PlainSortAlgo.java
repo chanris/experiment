@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @date 2021/2/19
  */
 @SuppressWarnings("all")
-public class SortAlgorithm {
+public class PlainSortAlgo {
 
     public static void main(String[] args) {
 //        selectSort();

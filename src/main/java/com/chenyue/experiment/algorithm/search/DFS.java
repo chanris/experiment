@@ -7,9 +7,5 @@ package com.chenyue.experiment.algorithm.search;
  */
 public class DFS {
     public static void main(String[] args) {
-        String str = "xx";
-        for(char c  : str.toCharArray()) {
-
-        }
     }
 }

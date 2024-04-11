@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 /**
  * @author chenyue7@foxmail.com
  * @date 5/1/2024
- * @description
+ * @description java optional 介绍详见： http://47.109.110.189/article/detail/54
  */
 public class Test {
     public static void main(String[] args) {
