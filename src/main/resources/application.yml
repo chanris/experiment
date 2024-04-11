@@ -1,0 +1,7 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: redis-cache
+  redis:
+    host: 192.168.42.134
