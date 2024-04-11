@@ -1,4 +1,4 @@
-package com.chenyue.experiment.designpattern.createpattern.abstrctfactory;
+package com.chenyue.experiment.designpattern.createpattern.abstractfactory;
 
 /**
  * @author chenyue7@foxmail.com
@@ -6,4 +6,5 @@ package com.chenyue.experiment.designpattern.createpattern.abstrctfactory;
  * @description
  */
 public interface Button {
+    void paint();
 }

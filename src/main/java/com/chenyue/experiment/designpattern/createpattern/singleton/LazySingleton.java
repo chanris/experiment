@@ -1,4 +1,4 @@
-package com.chenyue.experiment.designpattern.createpattern;
+package com.chenyue.experiment.designpattern.createpattern.singleton;
 
 /**
  * @author chenyue7@foxmail.com
