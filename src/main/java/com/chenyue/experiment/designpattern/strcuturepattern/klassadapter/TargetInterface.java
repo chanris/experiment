@@ -1,4 +1,4 @@
-package com.chenyue.experiment.designpattern.behaviorpattern.adapter;
+package com.chenyue.experiment.designpattern.strcuturepattern.klassadapter;
 
 /**
  * @author chenyue7@foxmail.com
