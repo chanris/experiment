@@ -1,4 +1,4 @@
-package com.chenyue.experiment.enums;
+package com.chenyue.experiment.basic.enums;
 
 import java.util.Arrays;
 
