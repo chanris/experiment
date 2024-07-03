@@ -2,7 +2,7 @@ package com.chenyue.experiment.collection;
 
 
 
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import com.chenyue.experiment.collection.pojo.Person;
 import com.chenyue.experiment.collection.pojo.Student;
 
@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  * @author chenyue7@foxmail.com
  * @date 2021/2/20
  * 测试集合类型的stream操作
- * ? super T 与 ? extends T 的区别: https://blog.csdn.net/bitcarmanlee/article/details/88199262
+ * <a href="https://blog.csdn.net/bitcarmanlee/article/details/88199262">? super T 与 ? extends T 的区别</a>
  */
 public class CollectionStreamTest {
     public static void main(String[] args) {

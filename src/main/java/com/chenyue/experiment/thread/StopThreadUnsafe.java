@@ -53,7 +53,5 @@ public class StopThreadUnsafe {
             Thread.sleep(150);  // 模拟
             thread.stop();
         }
-
-
     }
 }
