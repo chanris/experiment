@@ -3,7 +3,7 @@ package com.chenyue.experiment.designpattern.createpattern.factorymethod;
 /**
  * @author chenyue7@foxmail.com
  * @date 11/4/2024
- * @description 抽象工厂角色
+ * @description 抽象工厂角色： 工厂作用：创建具体类，系统解耦
  */
 public abstract class VehicleFactory {
     // 工厂方法，子类将实现此方法来创建具体的产品

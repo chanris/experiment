@@ -15,17 +15,18 @@ public class TestCallable implements Callable<Boolean> {
 
     @Override
     public Boolean call() throws Exception {
+        Thread.sleep(3 * 1000);
         System.out.println("callable线程执行....");
         return true;
     }
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args) throws Exception {
         // 创建job线程
         TestCallable t1 = new TestCallable();
         TestCallable t2 = new TestCallable();
         TestCallable t3 = new TestCallable();
 
-        //创建执行服务
+       /* //创建执行服务
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         //提交执行
         Future<Boolean> r1 = executorService.submit(t1);
@@ -39,6 +40,11 @@ public class TestCallable implements Callable<Boolean> {
         System.out.println(rs2);
         System.out.println(rs3);
         //关闭服务
-        executorService.shutdown();
+        executorService.shutdown();*/
+        FutureTask<Boolean> task = new FutureTask<>(t1);
+        new Thread(task, "callable Thread 01").start();
+
+        Boolean b = task.get();// 阻塞
+        System.out.println(b);
     }
 }

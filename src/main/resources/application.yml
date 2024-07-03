@@ -1,7 +1,10 @@
 server:
-  port: 8888
+  port: 8080
 spring:
   application:
-    name: redis-cache
+    name: java-experiment
   redis:
-    host: 192.168.42.134
+    host: 127.0.0.1
+    port: 6379
+    password: redis123
+
