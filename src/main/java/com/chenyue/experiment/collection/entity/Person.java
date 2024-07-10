@@ -1,24 +1,23 @@
-package com.chenyue.experiment.collection.pojo;
+package com.chenyue.experiment.collection.entity;
 
 /**
  * @author chenyue7@foxmail.com
- * @date 2021/3/1
+ * @date 2021/2/20
  */
-public class Student {
+public class Person {
     private Integer id;
     private String name;
     private Integer age;
-    private String studentId;
 
-    public Student() {
+    public Person() {
     }
 
-    public Student(Integer id, String name, Integer age, String studentId) {
+    public Person(Integer id, String name, Integer age) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.studentId = studentId;
     }
+
 
     public Integer getId() {
         return id;
@@ -44,21 +43,11 @@ public class Student {
         this.age = age;
     }
 
-    public String getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
-
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "Person{" +
+                "name='" + name + '\'' +
                 ", age=" + age +
-                ", studentId='" + studentId + '\'' +
                 '}';
     }
 }

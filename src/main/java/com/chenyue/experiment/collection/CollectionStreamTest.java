@@ -3,8 +3,8 @@ package com.chenyue.experiment.collection;
 
 
 import com.alibaba.fastjson2.JSON;
-import com.chenyue.experiment.collection.pojo.Person;
-import com.chenyue.experiment.collection.pojo.Student;
+import com.chenyue.experiment.collection.entity.Person;
+import com.chenyue.experiment.collection.entity.Student;
 
 import java.util.*;
 import java.util.stream.Collectors;
