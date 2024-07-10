@@ -5,6 +5,7 @@ package com.chenyue.experiment.basic;
  * @date 2024/7/10
  * @description 测试Integer包装类的比较
  */
+@SuppressWarnings("all")
 public class IntegerTest {
     public static void main(String[] args) {
         Integer a = Integer.valueOf(127);

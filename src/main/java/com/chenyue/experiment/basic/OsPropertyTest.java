@@ -4,6 +4,7 @@ package com.chenyue.experiment.basic;
  * @author chenyue7@foxmail.com
  * @date 2021/3/9
  */
+@SuppressWarnings("all")
 public class OsPropertyTest {
     public static void main(String[] args) {
         System.out.println(System.getProperty("java.io.tmpdir"));             // local缓存目录
@@ -28,5 +29,9 @@ public class OsPropertyTest {
         System.out.println(System.getProperty("user.name"));                  //用户的账户名称
         System.out.println(System.getProperty("user.home"));                  //用户的主目录
         System.out.println(System.getProperty("user.dir"));                   //用户的工作目录
+
+        //获得cpu核数
+        System.out.println(Runtime.getRuntime().availableProcessors());
+
     }
 }

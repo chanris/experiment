@@ -11,5 +11,6 @@ import java.util.ArrayList;
 public class KeyWordTest {
     public static void main(String[] args) {
         var list = new ArrayList<>(); // 右值推断类型
+        System.out.println(list.getClass().getName());
     }
 }

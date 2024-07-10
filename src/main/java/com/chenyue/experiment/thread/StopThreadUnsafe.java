@@ -4,9 +4,11 @@ import com.chenyue.experiment.thread.entity.User;
 
 /**
  * @author chenyue7@foxmail.com
+ * @date 2024/7/10
+ * @description
  */
 public class StopThreadUnsafe {
-    public static User u = new User();
+    public final static User u = new User();
 
     public static class ChangeObjectThread extends Thread{
         @Override
