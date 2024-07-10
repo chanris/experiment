@@ -8,12 +8,12 @@ package com.chenyue.experiment.basic;
  * 接口隔离原则
  * 依赖倒转原则
  * 里氏替换原则
- * 开闭原则 ocp
- * 迪米特法则
+ * 开闭原则
+ * 迪米特法则 : 每个对象只应与它直接关系的对象通信，不应依赖于其他对象
  * 合成复用原则
  *
  */
-public class CloneTest {
+public class ObjectCloneTest {
     public static void main(String[] args) throws CloneNotSupportedException {
         SimpleClone simpleClone = new SimpleClone("simpleClone",new Tag(1, "java"));
         SimpleClone simpleClone1 = (SimpleClone) simpleClone.clone();

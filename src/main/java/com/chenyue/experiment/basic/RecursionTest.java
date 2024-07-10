@@ -1,11 +1,11 @@
-package com.chenyue.experiment.basic.generic;
+package com.chenyue.experiment.basic;
 
 /**
  * @author chenyue7@foxmail.com
  * @date 22/4/2024
  * @description
  */
-public class Recursion {
+public class RecursionTest {
     static int ans = 0;
     public static void main(String[] args) {
         recursion(8);

@@ -11,7 +11,7 @@ package com.chenyue.experiment.basic;
  *  >> 根据符号位，在高位补1或者0
  *  >>> 不管符合位，高位都补0
  */
-public class BitOperaTest {
+public class BitOperateTest {
     public static void main(String[] args) {
         long num = 2L >>> 1;   // 无符号右移相当于除/2
         System.out.println(num);

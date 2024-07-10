@@ -8,7 +8,6 @@ package com.chenyue.experiment.basic.generic;
  *
  * 当使用<?>通配对象是, 实例的添加元素不可用
  *
- *
  */
 public class Params <E>{
 
@@ -28,7 +27,6 @@ public class Params <E>{
 
         Params params3 = new Params();
         params3 = params2;
-
     }
 
 }

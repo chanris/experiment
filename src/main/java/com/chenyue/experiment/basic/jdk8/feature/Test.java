@@ -1,4 +1,4 @@
-package com.chenyue.experiment.jdk8.feature;
+package com.chenyue.experiment.basic.jdk8.feature;
 
 /**
  * @author chenyue7@foxmail.com

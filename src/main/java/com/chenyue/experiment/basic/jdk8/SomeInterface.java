@@ -1,4 +1,4 @@
-package com.chenyue.experiment.basic.generic;
+package com.chenyue.experiment.basic.jdk8;
 
 /**
  * @author chenyue7@foxmail.com
@@ -23,5 +23,14 @@ public interface SomeInterface {
      */
     default void IDefaultMethod() {
         System.out.println("call default method of a interface");
+    }
+
+    /**
+     * since jdk 9
+     * 接口的私有方法
+     * 这些方法只能在同一个接口中的默认方法和私有方法中调用。
+     */
+    private void privateMethod() {
+        System.out.println("This a private method for this interface");
     }
 }
