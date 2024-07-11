@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 /**
  * @author chenyue7@foxmail.com
  * @date 2024/7/11
- * @description 多线程批发任务工具类
+ * @description 多线程批处理任务工具类
  */
 public class TaskBatchSendUtils {
 

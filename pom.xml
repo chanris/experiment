@@ -71,6 +71,7 @@
             <version>1.0</version>
         </dependency>
 
+        <!--测试transmittable-thread-local 和 spring thread pool-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>transmittable-thread-local</artifactId>
