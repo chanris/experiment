@@ -1,9 +1,9 @@
-package com.chenyue.experiment.thread.juc;
+package com.chenyue.experiment.thread.juc.threallocal;
 
 /**
  * @author chenyue7@foxmail.com
  * @date 2024/6/30
- * @description
+ * @description 测试ThreadLocal的基本使用
  */
 public class ThreadLocalTest {
 

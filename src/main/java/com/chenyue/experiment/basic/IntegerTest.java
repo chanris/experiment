@@ -3,7 +3,7 @@ package com.chenyue.experiment.basic;
 /**
  * @author chenyue7@foxmail.com
  * @date 2024/7/10
- * @description 测试Integer包装类的比较
+ * @description 测试Integer包装类的比较 缓存范围 -128 ~ 127
  */
 @SuppressWarnings("all")
 public class IntegerTest {

@@ -4,12 +4,12 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 /**
  * @author chenyue7@foxmail.com
- * @date 2021/2/18
+ * @date 2021/2/18 测试线程睡眠状态切换
  */
 public class ThreadSleep implements Runnable{
     @Override
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             try {
                 MILLISECONDS.sleep(1000);
             } catch (InterruptedException e) {
@@ -34,6 +34,5 @@ public class ThreadSleep implements Runnable{
             System.out.println(thread.getState());
         }
     }
-
 
 }

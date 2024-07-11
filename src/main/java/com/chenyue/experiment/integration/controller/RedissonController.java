@@ -1,4 +1,4 @@
-package com.chenyue.experiment.distributed.controller;
+package com.chenyue.experiment.integration.controller;
 
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * 表示myDLock 被线程thread-1持有，并重入了一次。
  */
 @RestController
-public class DemoController {
+public class RedissonController {
 
     @Resource
     RedissonClient redissonClient;

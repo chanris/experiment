@@ -11,7 +11,6 @@ public enum PizzaStatus {
     private final Integer val;
     private final String msg;
 
-
     PizzaStatus(Integer val, String msg){
         this.val = val;
         this.msg = msg;
@@ -36,5 +35,4 @@ public enum PizzaStatus {
     public boolean isReady(){
         return this == PizzaStatus.READY;
     }
-
 }

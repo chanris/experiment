@@ -1,4 +1,4 @@
-package com.chenyue.experiment.distributed.redisson;
+package com.chenyue.experiment.integration.conf.redisson;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;

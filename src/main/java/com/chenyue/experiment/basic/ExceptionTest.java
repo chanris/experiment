@@ -12,19 +12,19 @@ public class ExceptionTest {
         try {
             System.out.println("before statement");
             a %= b;
-            System.out.println("after statement");
+            System.out.println("after statement a:" + a);
             return a;
         }catch (Exception e) {
             System.out.println("catch statement");
             return -100;
         }finally {
             System.out.println("finally statement");
-            return 100;
+//            return 100;
         }
     }
 
     public static void main(String[] args) {
-        int f = f(0); // throws ArithmeticException: / by zero 除零异常
+        int f = f(10); // throws ArithmeticException: / by zero 除零异常
         System.out.println(f);
     }
 }

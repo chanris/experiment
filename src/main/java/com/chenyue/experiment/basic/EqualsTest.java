@@ -1,12 +1,9 @@
 package com.chenyue.experiment.basic;
 
-import java.util.Objects;
-
 /**
  * @author chenyue7@foxmail.com
- */
-
-/**
+ * @date 24/7/10
+ * @description
  * hashcode() 方法详解
  * hashcode()方法给对象返回一个hash code值。这个方法被用于hash table, 例如HashMap
  * 特点:
@@ -19,15 +16,29 @@ import java.util.Objects;
  * 1. 相等(相同)的对象必须具有相等的hash码
  * 2. 如果两个对象的hashCode相同，它们不一定相同
  *
- *
+ * == 基本类型比较的是值， 引用类型比较的是引用也就是内存地址。
+ * 字符串是特例：jvm底层有一个字符串池（String pool），存储每个字符串，所以不同字符串的内存地址是不同的。
+ * 在jdk 8之前字符串池存在于永久代，永久代属于堆的一部分。在jdk 8字符串池被移到了元空间（Metaspace）, 元空间属于本地内存（native memory）
+ * 元空间大小可以通过jvm参数调节，垃圾收集器（GC）会对元空间（Metaspace）进行垃圾收集。
  */
+@SuppressWarnings("all")
 public class EqualsTest {
     public static void main(String[] args) {
         String s  = new String("a");
         String s2 = new String("a");
-        System.out.println(s == s2);
-        System.out.println(s.equals(s2));
+        System.out.println("s == s2: " + (s == s2));
+        System.out.println("s.intern() == s2.intern(): " + (s.intern() == s2.intern()));
+        System.out.println("s.intern() == \"a\": " + (s.intern() == "a"));
+        System.out.println("s.equals(s2): " + (s.equals(s2)));
         System.out.println(s.hashCode());
+//        System.out.println((int)"a".charAt(0));
         System.out.println(s2.hashCode());
+
+        String a = "Aa";
+        String b = "BB";
+        System.out.println(a.hashCode());
+        System.out.println(b.hashCode());
+        System.out.println(a.hashCode() == b.hashCode());
+        System.out.println(a == b);
     }
 }

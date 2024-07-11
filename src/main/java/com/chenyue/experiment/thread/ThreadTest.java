@@ -6,9 +6,10 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author chenyue7@foxmail.com
  * @date 2021/2/17
- * 测试并发问题
+ * @description 测试并发问题
+ *
  */
-public class TestThread {
+public class ThreadTest {
     private static int num = 0;
     private static ReentrantLock lock = new ReentrantLock();
 
