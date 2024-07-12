@@ -25,7 +25,7 @@ public class MultiThreadPrintNum {
                 synchronized (lock) {
                     while (status != 0) {
                         try {
-                            lock.wait();
+                            lock.wait(); // 让出锁
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
