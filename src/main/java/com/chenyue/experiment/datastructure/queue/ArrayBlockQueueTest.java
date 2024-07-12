@@ -1,7 +1,6 @@
 package com.chenyue.experiment.datastructure.queue;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
