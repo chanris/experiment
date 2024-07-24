@@ -8,7 +8,7 @@ package com.chenyue.experiment.thread;
  *
  * 测试volatile的可见性。
  */
-public class VolatileTests {
+public class VolatileTest {
     volatile static boolean stop = false;
     public static void main(String[] args) {
         new Thread(() -> {

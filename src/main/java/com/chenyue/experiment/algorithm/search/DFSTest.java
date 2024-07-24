@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * @author chenyue7@foxmail.com
  * @date 10/1/2024
- * @description
+ * @description 深度优先搜索
  */
 public class DFSTest {
     private int V; // 节点数量

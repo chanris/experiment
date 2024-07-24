@@ -1,9 +1,9 @@
-package com.chenyue.experiment.oj;
+package com.chenyue.experiment.oj.dynamicprogramming;
 
 /**
  * @author chenyue7@foxmail.com
  * @date 16/1/2024
- * @description
+ * @description 爬楼梯
  */
 public class lc70 {
     public static void main(String[] args) {
