@@ -8,14 +8,14 @@ package com.chenyue.experiment.basic;
 public class ControlStatementTest {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 1000000000; i++) {}
+        for (int i = 0; i < 2000000000; i++) {}
         long endTime = System.currentTimeMillis();
         System.out.println("for loop 耗时:" + (endTime - startTime) + "ms");
 
 
         long startTime2 = System.currentTimeMillis();
         int i = 0;
-        while (i < 1000000000) {i++;}
+        while (i < 2000000000) {i++;}
         long endTime2 = System.currentTimeMillis();
         System.out.println("while loop 耗时:" + (endTime2 - startTime2) + "ms");
     }

@@ -7,36 +7,30 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * @author chenyue7@foxmail.com
+ * @date 2024/4/11
+ * @description
  * https://blog.csdn.net/haiyinshushe/article/details/82721234
- */
-/*
-java 基本数据类型 primitive type & reference type
-类型    存储字节   范围            默认值   包装类
-int     4         -2^31~2^31-1    0       Integer
-short   2         -2^15~2^15-1    0       Short
-byte    1         -2^7~2^7-1      0       Byte
-char    2         \u0000~\uffff
-*/
-/*
-* BigDecimal
-* BigDecimal num = new BigDecimal("0.005"); 尽量使用字符串初始化
-* 使用double类型值初始化BigDecimal，由于不是所有浮点数都能精确的表示成一个double类型值，
-* 有些浮点数值不能够被精确的表示成double类型值，因此它会被表示成与它最接近的double类型的值
-* 。所有<p>所以必须使用String的构造方法</p>
-* */
-/*
-科学计数法： 符号:尾数:指数
-尾数: 指大小在1<x<10之间的数
-指数: 指十的几次方
-eg: 3140的科学计数表示==>3.14*10^3
- */
-/*
-java 浮点型详解
-float  单精度浮点型  1bit(符号位) 8bit(指数位)   23(尾数位)
-double 双精度浮点型  1bit(符号位) 11bit(指数位)  52(尾数位)
-
-
-
+ *
+ * java 基本数据类型 primitive type & reference type
+ * 类型    存储字节   范围            默认值   包装类
+ * int     4         -2^31~2^31-1    0       Integer
+ * short   2         -2^15~2^15-1    0       Short
+ * byte    1         -2^7~2^7-1      0       Byte
+ * char    2         \u0000~\uffff
+ *
+ * BigDecimal
+ * BigDecimal num = new BigDecimal("0.005"); 尽量使用字符串初始化
+ * 使用double类型值初始化BigDecimal，由于不是所有浮点数都能精确的表示成一个double类型值，
+ * 有些浮点数值不能够被精确的表示成double类型值，因此它会被表示成与它最接近的double类型的值，所以必须使用String的构造方法
+ *
+ * 科学计数法： 符号:尾数:指数
+ * 尾数: 指大小在1<x<10之间的数
+ * 指数: 指十的几次方
+ * eg: 3140的科学计数表示==>3.14*10^3
+ *
+ * java 浮点型详解
+ * float  单精度浮点型  1bit(符号位) 8bit(指数位)   23(尾数位)
+ * double 双精度浮点型  1bit(符号位) 11bit(指数位)  52(尾数位)
  */
 public class BaseTypeTest {
 
