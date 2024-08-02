@@ -10,6 +10,7 @@ package com.chenyue.experiment.datastructure.binarytree;
  * 3.所有根到外部节点的路径上，黑色节点的数目都相同
  * 4.红黑树的插入节点都是红色
  * 5.外部节点（NULL节点）都是黑色的
+ * //todo 24/8/1
  */
 public class RedBlackTreeTest {
 }
