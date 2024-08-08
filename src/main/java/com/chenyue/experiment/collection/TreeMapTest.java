@@ -1,5 +1,7 @@
 package com.chenyue.experiment.collection;
 
+import java.util.Comparator;
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -18,10 +20,24 @@ import java.util.TreeMap;
  */
 public class TreeMapTest {
     public static void main(String[] args) {
+        // 无参构造
         TreeMap<Integer, String> map = new TreeMap<>();
+        // 有参构造，传入一个 Comparator接口的lambda实现，控制元素的有序方向
+        TreeMap<Integer, String> map2 = new TreeMap<>((o1, o2) -> o2 - o1);
         map.put(3, "Three");
         map.put(1, "One");
         map.put(2, "Two");
         System.out.println(map);
+
+        // 返回大于等于给定key的Entry对象，注意返回的Entry对象不可变，不能使用entry.setKey() or entry.setValue()
+        // 如果找不到，返回 null
+        Map.Entry<Integer, String> higher = map.higherEntry(3);
+        Map.Entry<Integer, String> equalsOrHigherEntry = map.ceilingEntry(3);
+        Map.Entry<Integer, String> equalsOrLowerEntry = map.floorEntry(1);
+        Map.Entry<Integer, String> lowerEntry = map.lowerEntry(1);
+        assert higher == null;
+        assert equalsOrHigherEntry != null;
+        assert equalsOrLowerEntry != null;
+        assert lowerEntry == null;
     }
 }

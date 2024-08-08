@@ -1,5 +1,6 @@
 package com.chenyue.experiment.datastructure.binarytree;
 
+import java.sql.SQLOutput;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -11,15 +12,23 @@ import java.util.LinkedList;
 public class TreeTraversalTest {
 
     public static void main(String[] args) {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(3);
-        TreeNode t4 = new TreeNode(4);
-        TreeNode t5 = new TreeNode(7);
+        TreeNode t1 = new TreeNode(10);
+        TreeNode t2 = new TreeNode(35);
+        TreeNode t3 = new TreeNode(0);
+        TreeNode t4 = new TreeNode(40);
+        TreeNode t5 = new TreeNode(25);
+        TreeNode t6 = new TreeNode(5);
+        TreeNode t7 = new TreeNode(-5);
+        TreeNode t8 = new TreeNode(30);
+        TreeNode t9 = new TreeNode(15);
         t1.left = t2;
         t1.right = t3;
-        t2.right = t4;
-        t3.left = t5;
+        t2.left = t4;
+        t2.right = t5;
+        t3.left = t6;
+        t3.right = t7;
+        t5.left = t8;
+        t5.right = t9;
 //        levelTraversal(t1);
         inorder(t1);
     }
@@ -71,9 +80,21 @@ public class TreeTraversalTest {
     }
 
     /**
-     * 非递归中序遍历
+     * 中序遍历
      */
     public static void inorder(TreeNode root) {
+        if(root == null) return;
+        inorder(root.left);
+        System.out.println(root.val + " 步骤1");
+        System.out.println(root.val + " 步骤2");
+        System.out.println(root.val + " 步骤3");
+        inorder(root.right);
+    }
+
+    /**
+     * 非递归中序遍历
+     */
+    public static void inorder2(TreeNode root) {
         Deque<TreeNode> st = new LinkedList<>();
         TreeNode cur = root;
         while (cur != null || !st.isEmpty()) {

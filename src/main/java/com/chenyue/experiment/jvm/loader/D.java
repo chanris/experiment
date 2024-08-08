@@ -8,6 +8,7 @@ package com.chenyue.experiment.jvm.loader;
  */
 @EnableConfiguration
 public class D {
+
     static {
         System.out.println("load class D.");
     }

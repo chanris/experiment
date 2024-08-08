@@ -3,6 +3,7 @@ package com.chenyue.experiment.jvm.loader;
 /**
  * @author chenyue7@foxmail.com
  * @date 2020/08/31
+ * @description
  *
  * java类 主动加载的情况
  * 创建类的实例
@@ -16,7 +17,6 @@ package com.chenyue.experiment.jvm.loader;
  */
 public class F {
     public static void main(String[] args) {
-
         // 类.class 不会加载该类
         System.out.println(A.class);
 //        A.load();

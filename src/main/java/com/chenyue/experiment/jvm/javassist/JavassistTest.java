@@ -4,8 +4,11 @@ import javassist.*;
 
 /**
  * @author chenyue7@foxmail.com
+ * @date 2024/4/11
+ * @description
+ * javassist 动态修改字节码的API
  */
-public class CreatePerson {
+public class JavassistTest {
 
     public static void createPerson() throws Exception {
         ClassPool pool = ClassPool.getDefault();

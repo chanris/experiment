@@ -5,7 +5,7 @@ package com.chenyue.experiment.datastructure.list;
  * @date 2024/7/23
  * @description 反转链表，要求空间常数阶
  */
-public class ListTraverse {
+public class ListTraversalTest {
     public static void main(String[] args) {
         Node head = createList(null, 1);
         createList(head, 2);
