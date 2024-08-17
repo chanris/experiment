@@ -23,7 +23,9 @@ public class TreeMapTest {
         // 无参构造
         TreeMap<Integer, String> map = new TreeMap<>();
         // 有参构造，传入一个 Comparator接口的lambda实现，控制元素的有序方向
-        TreeMap<Integer, String> map2 = new TreeMap<>((o1, o2) -> o2 - o1);
+        TreeMap<Integer, String> map2 = new TreeMap<>((o1, o2) -> {
+            return o2 - o1;
+        });
         map.put(3, "Three");
         map.put(1, "One");
         map.put(2, "Two");

@@ -24,5 +24,12 @@ public class ThreadPoolTest {
                 new ArrayBlockingQueue<Runnable>(200),
                 Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.DiscardOldestPolicy());
+    
+        ExecutorService executorService = Executors.newFixedThreadPool(3);  // 阻塞队列为：LinkedBlockingQueue，无参构造器，有界，Integer.MAV_VALUE，会导致OOM
+        ExecutorService executorService1 = Executors.newSingleThreadExecutor(); // LinkedBlockingQueue,无参构造器，有界，Integer.MAV_VALUE，会导致OOM
+        ExecutorService executorService2 = Executors.newCachedThreadPool(); // 允许创建的线程数为Integer.MAX_VALUE，会OOM
+
+        Runnable r = () -> System.out.println("Hello, World!");
+
     }
 }
