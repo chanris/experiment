@@ -1,7 +1,13 @@
 ### 这是我个人的“实验”仓库，包含对java语言、常用框架&工具、设计模式、算法的一些理解和实现。
-
-就像开头所说的，这是个个人仓库，代码结构还很杂乱，但我会逐渐改进这个仓库，使其更加可读。
-
-对于代码内容，我尽量通过包名见名知义。
-
-每个大类、二类我尽量在包内写一个index类帮助其理解。
+* algorithm: 常见的算法实现
+* basic: 关于Java语法、数据类型、版本特性、泛型、枚举、位运算等等的测试代码
+* collection: 关于Java集合类的测试代码
+* data-structure: 常见的数据结构测试代码，包括但不限于数组、队列、栈、链表、哈希表、集合等
+* design-pattern: 23种设计模式代码（以剥离，详情见：）
+* integration: 包括但不限于Spring、Spring MVC、Redisson、Mybatis相关测试代码
+* jvm: gc, cglib相关测试
+* oj: 主要是leetcode题解
+* os: 操作系统的相关算法
+* reflect: Java反射相关测试代码
+* regex: Java正则表达式相关测试代码
+* thread: Java多线程相关测试代码
