@@ -7,6 +7,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author chenyue7@foxmail.com
  * @date 26/3/2024
  * @description
+ * Condition 搭配 ReentrantLock 使用，关系好比 synchronized关键字 与 Object.wait()方法
+ *
  */
 public class ConditionTest {
     public static ReentrantLock lock = new ReentrantLock();
