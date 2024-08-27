@@ -1,5 +1,6 @@
 package com.chenyue.experiment.integration.conf.redisson;
 
+import com.chenyue.experiment.integration.annotation.EnableRpc;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2024/7/3
  * @description
  */
+@EnableRpc
 @Configuration
 public class RedissonConf {
 
