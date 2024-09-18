@@ -117,7 +117,7 @@ public class SkipListTest {
             return lv;
         }
 
-        static class SkipListNode {
+        private static class SkipListNode {
             int val;
             // 指向后面的节点
             SkipListNode[] next;
@@ -127,6 +127,4 @@ public class SkipListTest {
             }
         }
     }
-
-
 }

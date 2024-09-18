@@ -49,6 +49,12 @@ public class RegxTest {
 //            System.out.println(matcher.groupCount());
 //        }
 
+        String str = "Alpha.Beta.Gamma.";
+        for (String s : str.split("\\.\\s*")) {
+            System.out.println(s);
+        }
+
+
         boolean food = Pattern.matches("fo{2}d", "food");       // {2} 匹配指定个数的前一个
 //        boolean food = Pattern.matches("fo*d", "fd"); // 匹配零个或者多个前一个字符串
 //        boolean food = Pattern.matches("fo{0,2}d", "fd");
