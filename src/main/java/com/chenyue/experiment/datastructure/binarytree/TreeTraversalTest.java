@@ -1,6 +1,5 @@
 package com.chenyue.experiment.datastructure.binarytree;
 
-import java.sql.SQLOutput;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -30,12 +29,11 @@ public class TreeTraversalTest {
         t5.left = t8;
         t5.right = t9;
 //        levelTraversal(t1);
-        inorder(t1);
+//        inorder(t1);
     }
 
-
     /**
-     * 层次遍历
+     * 层次遍历，非递归
      */
     public static void levelTraversal(TreeNode root) {
         Deque<TreeNode> q = new LinkedList<>();
@@ -53,13 +51,11 @@ public class TreeTraversalTest {
     }
 
     /**
-     * 层次遍历，非递归
+     * 层次遍历递归
      */
-    public static void levelTraversal2() {
+    public static void levelTraversalRecursive() {
 
     }
-
-
 
     /**
      * 非递归前序遍历

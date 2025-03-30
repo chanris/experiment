@@ -12,7 +12,7 @@ import java.util.LinkedList;
 @SuppressWarnings("all")
 public class QuickSortAlgo {
     public static void main(String[] args) {
-        int[] nums = new int[]{2, 4, 7, 5, 3, 1, 9};
+        int[] nums = new int[]{2, 4, 7, 5, 3, 1, -1, 9, 300, 100};
 //        quickSort(nums, 0, nums.length-1);
         quickSort2(nums);
         System.out.println(Arrays.toString(nums));

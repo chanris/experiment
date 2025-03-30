@@ -10,6 +10,9 @@ public class StringTest {
         String s = "leetcode";
         String word = "leet";
         boolean b = s.startsWith(word, 0);
-        System.out.println(b);
+//        System.out.println(b);
+
+        System.out.println("getTypeName: " + s.getClass().getTypeName());
+        System.out.println("getName: " + s.getClass().getName());
     }
 }
