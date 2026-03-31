@@ -9,9 +9,9 @@ import java.util.*;
  */
 public class lc15 {
     public static void main(String[] args) {
-        int[] nums = new int[]{1,2,-2,-1};
+        int[] nums = new int[]{-1,0,1,2,-1,-4};
 
-        for (List<Integer> list : threeSum(nums)) {
+        for (List<Integer> list : threeSum2(nums)) {
             System.out.println(Arrays.toString(list.toArray()));
         }
     }
@@ -41,6 +41,38 @@ public class lc15 {
                     pre = nums[l];
                 }
                 l++;
+            }
+        }
+        return ans;
+    }
+
+    public static List<List<Integer>> threeSum2(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> ans = new ArrayList<>();
+        for(int i = 0; i < nums.length; i++) {
+            int l = 0, r = nums.length - 1;
+            while(l < r) {
+                if(l == i) {
+                    l++;
+                }
+                if(r == i) {
+                    r--;
+                }
+                if(nums[l] + nums[r] + nums[i] == 0) {
+                    List<Integer> list = new ArrayList<>();
+                    list.add(nums[l]);
+                    list.add(nums[r]);
+                    list.add(nums[i]);
+                    ans.add(list);
+                    while (l < r && nums[l] == nums[l+1]) { l ++;}
+                    while (l < r && nums[r] == nums[r-1]) { r --;}
+                    l++;
+                    r--;
+                }else if(nums[l] + nums[r] + nums[i] < 0) {
+                    l++;
+                }else {
+                    r--;
+                }
             }
         }
         return ans;

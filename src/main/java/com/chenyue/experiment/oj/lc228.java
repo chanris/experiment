@@ -1,6 +1,7 @@
 package com.chenyue.experiment.oj;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -41,5 +42,26 @@ public class lc228 {
             }
         }
         return res;
+    }
+
+    public List<String> summaryRanges2(int[] nums) {
+        if(nums.length == 0) return new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+        list.add(nums[0]);
+        int cur = nums[0], left = 1;
+        while(left < nums.length) {
+            if(cur == nums[left] - 1) {
+                cur = nums[left];
+                left++;
+            }else {
+                list.add(nums[left]);
+                left++;
+                if(left < nums.length) {
+                    list.add(nums[left]);
+                }
+            }
+        }
+        System.out.println(Arrays.toString(list.toArray()));
+        return null;
     }
 }

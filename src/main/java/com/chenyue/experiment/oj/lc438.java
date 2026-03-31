@@ -10,10 +10,54 @@ import java.util.*;
 public class lc438 {
 
     public static void main(String[] args) {
-        String s = "ab"; // 9 7
-        String p = "ba";
-        List<Integer> list = findAnagrams(s, p);
+        String s = "bpaa"; // 9 7
+        String p = "aa";
+        List<Integer> list = findAnagrams3(s, p);
         System.out.println(Arrays.toString(list.toArray()));
+    }
+
+    public static List<Integer> findAnagrams3(String s, String p) {
+        int[] cnts = new int[26];
+        List<Integer> ans = new ArrayList<>();
+        if(s.length() < p.length()) return ans;
+        int l = 0, r  = p.length(), n = 0;
+        n = p.length();
+        for(int i = 0; i < p.length(); i++) {
+            cnts[p.charAt(i) - 'a']++;
+        }
+        for(int i = 0; i < p.length(); i++) {
+            int b = --cnts[s.charAt(i) - 'a'];
+            if(b >= 0) {
+                n--;
+            }else {
+                n++;
+            }
+        }
+        if(n == 0) {
+            ans.add(l);
+        }
+        while(r < s.length()) {
+            int a = cnts[s.charAt(l) - 'a']++;
+            // 从滑动窗口拿掉一个 根据 cnts的值来判断 n++/n--
+            // 如果cnts > 0
+            if(a >= 0) {
+                n++;
+            }else {
+                n--;
+            }
+            l++;
+            int b = cnts[s.charAt(r) - 'a']--;
+            if(b  <= 0) {
+                n++;
+            }else {
+                n--;
+            }
+            r++;
+            if(n == 0) {
+                ans.add(l);
+            }
+        }
+        return ans;
     }
 
     // 错误思路： 利用 p的ascii码 和值 作为判断条件，会出现  "af" == "be" 的情况。

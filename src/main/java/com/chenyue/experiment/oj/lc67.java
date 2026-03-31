@@ -12,7 +12,7 @@ import java.util.List;
 public class lc67 {
 
     public static void main(String[] args) {
-        String s = addBinary("1111", "1111");//  110
+        String s = addBinary2("100", "110010");//  110
         System.out.println(s);
     }
     public static String addBinary(String a, String b) {
@@ -68,5 +68,52 @@ public class lc67 {
             res[j++] = c[i];
         }
         return new String(res);
+    }
+
+    public static String addBinary2(String a, String b) {
+        StringBuilder sb = new StringBuilder();
+        a = reverseString(a);
+        b = reverseString(b);
+        int aLen = a.length(), bLen = b.length();
+        int c = 0, res = 0;
+        for(int i = 0; i < Math.min(aLen, bLen); i++) {
+            res = a.charAt(i) - '0' + b.charAt(i) - '0' + c;
+            if(res > 1) {
+                c = 1;
+                res -= 2;
+            }else {
+                c = 0;
+            }
+            sb.append((char)(res + '0'));
+        }
+        if(aLen > bLen) {
+            for(int i =  bLen; i < aLen; i++) {
+                res = a.charAt(i) - '0' + c;
+                if(res > 1) {
+                    c = 1;
+                    res -= 2;
+                }else {
+                    c = 0;
+                }
+                sb.append((char)(res + '0'));
+            }
+        }
+        if(aLen < bLen) {
+            for(int i = aLen; i < bLen; i++) {
+                res = b.charAt(i) - '0' + c;
+                if(res > 1) {
+                    c = 1;
+                    res -= 2;
+                }else {
+                    c = 0;
+                }
+                sb.append((char)(res + '0'));
+            }
+        }
+        if(c != 0) {
+            sb.append('1');
+        }
+        sb.reverse();
+        return sb.toString();
     }
 }

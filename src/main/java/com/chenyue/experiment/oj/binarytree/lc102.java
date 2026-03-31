@@ -28,28 +28,29 @@ public class lc102 {
         root.right = node2;
         node2.left = node3;
         node2.right = node4;
-        lc102.levelOrder(root);
+        List<List<Integer>> lists = lc102.levelOrder(root);
+        System.out.println(Arrays.toString(lists.toArray()));
     }
 
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
         if (root == null)
             return ans;
-        Queue<TreeNode> que = new LinkedList<TreeNode>();
-        que.offer(root); // 插入队尾
+        Deque<TreeNode> que = new LinkedList<TreeNode>();
+        que.addFirst(root); // 插入队尾
 
         while (!que.isEmpty()) {
             List<Integer> itemList = new ArrayList<Integer>();
             int len = que.size();
 
             while (len > 0) {
-                TreeNode tmpNode = que.poll(); // 删除队列第一个
+                TreeNode tmpNode = que.removeLast(); // 删除队列第一个
                 itemList.add(tmpNode.val);
                 if (tmpNode.left != null) {
-                    que.offer(tmpNode.left);
+                    que.addFirst(tmpNode.left);
                 }
                 if (tmpNode.right != null) {
-                    que.offer(tmpNode.right);
+                    que.addFirst(tmpNode.right);
                 }
                 len--;
             }
