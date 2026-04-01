@@ -11,13 +11,7 @@ public class lc141 {
 
     public static void main(String[] args) {
         lc206.ListNode listNode = new lc206.ListNode(1);
-        lc206.ListNode listNode2 = new lc206.ListNode(2);
-        lc206.ListNode listNode3 = new lc206.ListNode(3);
-        lc206.ListNode listNode4 = new lc206.ListNode(3);
-        lc206.ListNode listNode5 = new lc206.ListNode(4);
-        listNode.next = listNode2;
-        listNode2.next = listNode;
-        boolean b = hasCycle(listNode);
+        boolean b = hasCycle2(listNode);
         System.out.println(b);
     }
 
@@ -36,5 +30,20 @@ public class lc141 {
             }
         }
         return false;
+    }
+
+
+    public static boolean hasCycle2(lc206.ListNode head) {
+        lc206.ListNode slow = head, fast = head;
+        while(slow != fast) {
+            slow = slow.next;
+            if(fast.next != null) {
+                fast = fast.next.next;
+            }else {
+                return false;
+            }
+            if(slow == null || fast == null) return false;
+        }
+        return true;
     }
 }
